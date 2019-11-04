@@ -6,120 +6,84 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div>
-		<h1>Стандарты написания гибкого, надежного и жизнеспособного HTML c CSS</h1>
-	</div>
-	<div>
+	<div class="p">
+		<h1 class="first">Стандарты написания гибкого, надежного и жизнеспособного HTML c CSS</h1>
+
 		<img src="https://miro.medium.com/max/1200/1*aK6-A2EmtFCYriaKgoguPw.png">
-	</div>
-	<div>
-		<p>Вообще, эта статья является неким руководством по написанию грамотного HTML и CSS. Но явно не полноценным БЭМ, который, кстати, является очень спорным моментом в мире фронт-энда. Но об этом потом.</p>
-	</div>
-	<div>
-		<p>То, что вы прочитаете, скорее является сводом правил хорошего тона при вёрстке, которые сведут на минимум проблемы с пониманием и рендерингом вашей работы.</p>
-	</div>
-	<div>
-		<h1>HTML</h1>
-	</div>
-	<div>
-		<h2>Синтаксис</h2>
-	</div>
-	<div>
-		<p>Используйте двойные пробелы — это единственный способ, который будет гарантировать то, что ваш код покажется и отрендерится одинаковым образом в любой среде разработки.
-Вложенные элементы должны иметь только одинарный отступ, то есть двойным пробелом.
-На атрибутах всегда используйте двойные кавычки, а не одинарные.
-Не включайте закрывающий слеш в самозкрывающиеся элементы — HTML5 спецификация указывает на то, что они вообще опциональны, но мы то знаем.
-Ни в коем случае не пропускайте самозакрывающиеся теги (такие как </li> или </body>).</p>
-	</div>
-	<div>
-		<pre><!DOCTYPE html>
-<html>
-  <head>
-    <title>Заголовок страницы</title>
-  </head>
-  <body>
-    <img src="images/company-logo.png" alt="Company">
-    <h1 class="hello-world">Привет, братиш!</h1>
-  </body>
-</html></pre>
-	</div>
-	<div>
-		<h2>HTML doctype</h2>
-	</div>
-	<div>
-		<p>Чтобы работать в режиме стандартов и последовательного рендеринга элементов в каждом доступном браузере — добавляйте этот простой доктайп в начале каждой HTML страницы. Вообще, всегда старайтесь помнить про стандарты.</p>
-	</div>
-	<div>
-		<pre><!DOCTYPE html>
-<html>
-  <head>
-  </head>
-</html></pre>
-	</div>
-	<div>
-		<h2>Атрибуты языка</h2>
-	</div>
-	<div>
-		<p>Вырезка из спецификации HTML5:</p>
-	</div>
-	<div>
-		<p>Разработчикам рекомендуется указывать атрибут языка в начале html файла, тем самым указывая на принадлежность языка документа. Это способствует инструментам генерации голоса определить то, какое произношение использовать, а инструментам перевода определить каким правилам придерживаться и так далее.</p>
-	</div>
-	<div>
-		<p>
-		<a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">Вообще, прочитайте побольше об атрибуте lang в этой спецификации.</a>
-	</p>
-	</div>
-	<div>
-		<p>А вот, ссылка на
-			<a href="http://reference.sitepoint.com/html/lang-codes">Sitepoint со списком языковых кодов.</a>
+
+		<p id="p1" class="fv fu fw fj bk b">Вообще, эта статья является неким руководством по написанию грамотного HTML и CSS. Но явно не полноценным БЭМ, который, кстати, является очень спорным моментом в мире фронт-энда. Но об этом потом.</p>
+
+		<p class="fv fu fw fj bk b">То, что вы прочитаете, скорее является сводом правил хорошего тона при вёрстке, которые сведут на минимум проблемы с пониманием и рендерингом вашей работы.</p>
+
+		<p class="fv fu fw fj bk b">Перевод статьи
+			<a href="http://codeguide.co/#html-practicality" class="fx fy fz" target="_blank" rel="noopener"><em class="gb">Standards for developing flexible, durable, and sustainable HTML and CSS.</em></a>
 		</p>
-	</div>
-	<div>
-<pre><html lang="ru">
-  <!-- ... -->
-</html></pre>
-	</div>
-	<div>
-		<h2>Режим совместимости IE</h2>
-	</div>
-	<div>
-		<p>Internet Explorer поддерживает тег использования совместимости <meta>, чтобы указывать то, под какую версию IE должна быть отрендерена страница. Да, пока что обстоятельства этого требуют и самый подходящий способ — это указать IE использовать последний поддерживаемый мод с edge mode.</p>
-	</div>
-	<div>
-		<pre><meta http-equiv="X-UA-Compatible" content="IE=Edge"></pre>
-	</div>
-	<div>
-		<h2>Кодировки</h2>
-	</div>
-	<div>
-		<p>Легко и быстро делайте правильный рендеринг вашего контента, указывая точную кодировку вашим страницам. Так вы можете избежать использования мнемоников в HTML ( Это &nbsp; и т.п. В общем, дальше вы поняли), указывая их точную кодировку документу. В основном, самая ходовая кодировка это UTF-8.</p>
-	</div>
-	<div>
-		<pre><head>
-  <meta charset="UTF-8">
-</head></pre>
-	</div>
-	<div>
-		<h2>Указание пути к CSS и JavaScript</h2>
-	</div>
-	<div>
-		<p>По спецификации HTML5, нет нужды в конкретном указании type при вставке CSS и JavaScript файлов, добавля как text/css так и text/javascript как страндартные указатели на типы подключаемых файлов. Теперь это лишнее.</p>
-	</div>
-	<div>
-		<p>Просто сделайте так:</p>
-	</div>
-	<div>
-		<pre><!-- Внешний CSS -->
-<link rel="stylesheet" href="code-guide.css">
 
-<!-- Внутренний CSS -->
-<style>
-  /* ... */
-</style>
+		<h1 id="second" class="gc bk bj ge gn go" data-selectable-paragraph="">HTML</h1>
 
-<!-- JavaScript -->
-<script src="code-guide.js"></script></pre>
+		<h2 id="8818" class=" bk ge gz ha" data-selectable-paragraph="">Синтаксис</h2>
+
+		<p id="0739" class="fj bk b fu fw" data-selectable-paragraph="">Используйте двойные пробелы — это единственный способ, который будет гарантировать то, что ваш код покажется и отрендерится одинаковым образом в любой среде разработки.</p>
+		<p id="4fe5" class="fj bk b fu fv fw" data-selectable-paragraph="">Вложенные элементы должны иметь только одинарный отступ, <strong class="fl hh">то есть двойным пробелом.</strong></p>
+
+		<p id="9dc4" class="fj bk b fu fv fw" data-selectable-paragraph="">На атрибутах всегда используйте двойные кавычки, а не одинарные.</p>
+
+		<p id="1e38" class="fj bk b fu fv fw" data-selectable-paragraph="">Не включайте закрывающий слеш в самозкрывающиеся элементы — HTML5 <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag" class="fx fy fz" target="_blank" rel="noopener">спецификация указывает на то, что они вообще опциональны, но мы то знаем.</a></p>
+
+		<p id="0451" class="fj bk b fu fv fw" data-selectable-paragraph="">Ни в коем случае не пропускайте самозакрывающиеся теги (такие как <code class="fd hi hj hk hl b">&lt;/li&gt;</code> или <code class="fd hi hj hk hl b">&lt;/body&gt;</code>).</p>
+
+	    <pre class="er es et eu ev hm hn ho"><span id="7028" class="gq gd dc bk hl b du hp hq r hr" data-selectable-paragraph="">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>  &lt;head&gt;<br>    &lt;title&gt;Заголовок страницы&lt;/title&gt;<br>  &lt;/head&gt;<br>  &lt;body&gt;<br>    &lt;img src="images/company-logo.png" alt="Company"&gt;<br>    &lt;h1 class="hello-world"&gt;Привет, братиш!&lt;/h1&gt;<br>  &lt;/body&gt;<br>&lt;/html&gt;</span></pre>
+
+	    <h2 id="bf53" class="bk bj ge gu gv gw gz ha" data-selectable-paragraph="">HTML5 doctype</h2>
+
+		<p class="fv fu fw fj bk b">Чтобы работать в режиме стандартов и последовательного рендеринга элементов в каждом доступном браузере — добавляйте этот простой доктайп в начале каждой HTML страницы. Вообще, всегда старайтесь помнить про стандарты.</p>
+
+		<pre><span id="211d" class="bk b" data-selectable-paragraph="">&lt;!DOCTYPE html&gt;<br>&lt;html&gt;<br>  &lt;head&gt;<br>  &lt;/head&gt;<br>&lt;/html&gt;</span></pre>
+
+		<h2 id="de68" class="bk ge gu gv gw gy gz ha" data-selectable-paragraph="">Атрибуты языка</h2>
+
+		<p class="fv fu fw fj bk b">Вырезка из спецификации HTML5:</p>
+
+		<p id="a989" class="fj bk b fu fv fw" data-selectable-paragraph=""><em class="gb">Разработчикам рекомендуется указывать атрибут языка в начале html файла, тем самым указывая на принадлежность языка документа. Это способствует </em><strong class="fl hh"><em class="gb">инструментам генерации голоса</em></strong><em class="gb"> определить то, какое произношение использовать, а инструментам перевода определить каким правилам придерживаться и так далее.</em></p>
+
+		<p id="6e52" class="fj bk b fu fv fw" data-selectable-paragraph=""><a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element" class="at cg fx fy fz ga" target="_blank" rel="noopener">Вообще, прочитайте побольше об атрибуте lang в этой спецификации.</a></p>
+
+		<p id="b765" class="fj bk b fu fv fw" data-selectable-paragraph="">А вот, ссылка на <a href="http://reference.sitepoint.com/html/lang-codes" class="at cg fx fy fz ga" target="_blank" rel="noopener">Sitepoint со списком языковых кодов.</a></p>
+
+		<pre class="er es et eu ev hm hn ho"><span id="23da" class="bk b" data-selectable-paragraph="">&lt;html lang="ru"<!-- -->&gt;<br>  &lt;!-- ... --&gt;<br>&lt;/html&gt;</span></pre>
+
+		<h2 id="e66a" class="bk ge gu gv gw gy gz ha" data-selectable-paragraph="">Режим совместимости IE</h2>
+
+		<p id="60f2" class="fj bk b fu fw" data-selectable-paragraph="">Internet Explorer поддерживает тег использования совместимости <code class="b">&lt;meta&gt;</code>, чтобы указывать то, под какую версию IE должна быть отрендерена страница. Да, пока что обстоятельства этого требуют и самый подходящий способ — это указать IE использовать последний поддерживаемый мод с <strong class="fl hh">edge mode</strong>.</p>
+
+		<pre class="ev"><span id="0e78" class="bk b" data-selectable-paragraph="">&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;</span></pre>
+
+		<h2 id="b6f3" class="bk bj ge gu gv gw gy gz ha" data-selectable-paragraph="">Кодировки</h2>
+
+		<p id="eaab" class="fj bk b fu fw" data-selectable-paragraph="">Легко и быстро делайте правильный рендеринг вашего контента, указывая точную кодировку вашим страницам. Так вы можете избежать использования мнемоников в HTML ( <em class="gb">Это &amp;nbsp; и т.п. В общем, дальше вы поняли</em>), указывая их точную кодировку документу. В основном, самая ходовая кодировка это <code class="fd hi hj hk hl b">UTF-8</code>.</p>
+
+		<pre class="ev"><span id="e2e7" class="bk b" data-selectable-paragraph="">&lt;head&gt;<br>  &lt;meta charset="UTF-8"&gt;<br>&lt;/head&gt;</span></pre>
+
+		<h2 id="0ce4" class="bk ge gu gv gw gy gz ha" data-selectable-paragraph="">Указание пути к CSS и JavaScript</h2>
+
+		<p id="3b56" class="fj bk b fu fw" data-selectable-paragraph="">По спецификации HTML5, нет нужды в конкретном указании type при вставке CSS и JavaScript файлов, добавля как <code class="fd hi hj hk hl b">text/css</code> так и <code class="fd hi hj hk hl b">text/javascript</code> как страндартные указатели на типы подключаемых файлов. Теперь это лишнее.</p>
+
+		<p id="4a93" class="fj bk b fu fv fw" data-selectable-paragraph="">Просто сделайте так:</p>
+
+		<pre class="ev"><span id="dcc1" class="bk b" data-selectable-paragraph="">&lt;!-- <strong class="hl hh">Внешний CSS</strong> --&gt;<br>&lt;link rel="stylesheet" href="code-guide.css"&gt;<br><br>&lt;!-- <strong class="hl hh">Внутренний CSS</strong> --&gt;<br>&lt;style&gt;<br>  /* ... */<br>&lt;/style&gt;<br><br>&lt;!-- JavaScript --&gt;<br>&lt;script src="code-guide.js"&gt;&lt;/script&gt;</span></pre>
+
+	</div>
+
+	<div>
+		<a href="https://medium.com/membership?source=upgrade_membership---nav_full------------------------" class="at au av aw ax ay az ba bb bc bd be bf bg bh bi" rel="noopener"><span class="bj b bk bl bm bn r bo bp">Become a member</span></a>
+	</div>
+
+	<div>
+		<span class="bj b bk bl bm bn r bo bp"><a href="https://medium.com/m/signin?operation=login&amp;redirect=https%3A%2F%2Fmedium.com%2F%40stasonmars%2F%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D1%8B-%D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D1%8F-%D0%B3%D0%B8%D0%B1%D0%BA%D0%BE%D0%B3%D0%BE-%D0%BD%D0%B0%D0%B4%D0%B5%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B8-%D0%B6%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D0%B3%D0%BE-html-c-css-4b6ee6af3eb&amp;source=post_page-----4b6ee6af3eb---------------------nav_reg-" class="br bs av aw ax ay az ba bb bc bt bu bf bg bv bw" rel="noopener">Sign in</a></span>
+	</div>
+
+	<div>
+		<button class="bx by br bs bz bt bu ca bc cb bj b bk bl bm bn cc cd ce cf cg bf">Get started</button>
 	</div>
 </body>
 </html>

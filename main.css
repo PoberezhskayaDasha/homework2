@@ -1,0 +1,80 @@
+.first {
+	margin: 0;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+    font-style: normal;
+}
+.b {
+	font-weight: 400;
+}
+.bk {
+	font-style: normal;
+}
+.fw {
+	margin-bottom: -0.46em;
+}
+.fu {
+	font-size: 21px;
+}
+.fv {
+	margin-top: 2em;
+}
+.p {
+	display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0;
+}
+body {
+	text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+.fz {
+	background-size: 1px 1px;
+}
+.fy {
+	background-image: url(data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" x…g"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(0, 0, 0, 0.84)" /></svg>);
+}
+.fx {
+	background-repeat: repeat-x;
+}
+.fu {
+	font-size: 21px;
+}
+.fj {
+	line-height: 1.58;
+}
+.go {
+	margin-top: 1.95em;
+}
+.gn {
+	font-size: 34px;
+}
+.ge {
+	font-weight: 600;
+}
+.gc {
+	line-height: 1.12;
+}
+.ha {
+	margin-top: 1.72em;
+}
+.gz {
+	font-size: 26px;
+}
+#second {
+	display: block;
+	margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.ev {
+	margin-top: 56px;
+}
